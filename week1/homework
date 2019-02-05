@@ -1,1 +1,49 @@
-empty
+// console log button 
+const button = document.getElementById('saveBtn')
+console.log(button);
+// console log all inputs
+const allinputs = document.getElementById('myForm')
+console.log(allinputs);
+
+// change button text
+button.innerHTML ='Enregistrer'
+
+// add class to button and country input
+document.getElementById("saveBtn").className = "buttonclass";
+const input = document.getElementById('country')
+document.getElementById("country").className = "countryclass";
+
+
+// change color of that class
+button.setAttribute('style','color:green;')
+input.setAttribute('style', 'color:pink;')
+// set value of name input
+const nameinput = document.getElementById('name')
+document.getElementById("name").value = "Lina";
+
+// append p to form with values of inputs when clicking the button
+
+//var para = document.createElement("P");
+
+button.addEventListener("click", function () {
+    var para = document.createElement("P");
+para.setAttribute('class','paragclass')
+//para.setAttribute('style','color:blue;')
+para.setAttribute('id','paragid;')
+document.getElementById("myForm").appendChild(para);
+var t = document.createTextNode("This is my  paragraph.");      // Create a text node
+para.appendChild(t);  
+para.after(button);
+
+   console.log(para);
+  
+//document.form.appendChild(para);
+
+
+  //var att = document.createAttribute("class");
+ // att.value = "classpara"
+  //para.setAttribute(att);
+ // para.setAttribute('style','color:green;')
+
+
+});
